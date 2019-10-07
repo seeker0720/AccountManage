@@ -7,6 +7,7 @@
 @Date：2019/10/7 18:54
 @Instructions:
 """
+ADMINISTRATOR = 'Admin'
 
 DATABASES = {
     'default': {

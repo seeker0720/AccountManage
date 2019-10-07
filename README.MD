@@ -29,16 +29,19 @@ $PATH\AccountManage>virtualenv AM_env
 + AccountManage /
   + AM_env /
   + core /
-    + \_\_init.py__
+    + \_\_init__.py
     + auth.py
     + common.py
     + main.py
     + models.py
+    + admin.py
+    + get_command_line_argv.py
+    + manage.py
   + conf /
-    + \_\_init.py__.py
+    + \_\_init__.py
     + settings.py
   + docs /
-    + \_\_init.py__
+    + \_\_init__.py
   + REDEME.md
   + requirements.txt
 
@@ -97,12 +100,20 @@ DATABASES = {
 
 需要修改的部分分别为`NAME`、`USER`、`PASSWORD`,修改为自己的即可
 
-#### 启动程序
+#### 创建管理员密码
 
-将目录切换到`AccountManage\core\`下，输入以下命令启动程序：
+将目录切换到`AccountManage\core\`下，输入以下命令创建管理员密码：
 
 ```powershell
-(AM_env)$PATH\AccountManage\core\>python main.py
+(AM_env)$PATH\AccountManage\core\>python manage.py createpassword
+```
+
+#### 启动程序
+
+创建管理员密码后，执行以下命令启动程序
+
+```powershell
+(AM_env)$PATH\AccountManage\core\>python manage.py runapp
 ```
 
 
