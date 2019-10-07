@@ -24,26 +24,7 @@ $PATH\AccountManage>virtualenv AM_env
 ```
 
 执行完成后，会生成一个AM_env文件夹，
-##### 目录结构如下
 
-+ AccountManage /
-  + AM_env /
-  + core /
-    + \_\_init__.py
-    + auth.py
-    + common.py
-    + main.py
-    + models.py
-    + admin.py
-    + get_command_line_argv.py
-    + manage.py
-  + conf /
-    + \_\_init__.py
-    + settings.py
-  + docs /
-    + \_\_init__.py
-  + REDEME.md
-  + requirements.txt
 
 
 
@@ -118,7 +99,26 @@ DATABASES = {
 
 
 
+##### 目录结构如下
 
++ AccountManage /
+  + AM_env /
+  + core /
+    + \_\_init__.py
+    + auth.py
+    + common.py
+    + main.py
+    + models.py
+    + admin.py
+    + get_command_line_argv.py
+    + manage.py
+  + conf /
+    + \_\_init__.py
+    + settings.py
+  + docs /
+    + \_\_init__.py
+  + REDEME.md
+  + requirements.txt
 
 
 
