@@ -1,4 +1,7 @@
 ## AccountManage账户信息管理器
+
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/seeker0720/AccountManage?style=flat&logo=appveyor)![GitHub last commit](https://img.shields.io/github/last-commit/seeker0720/AccountManage?style=flat&logo=appveyor)![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/seeker0720/AccountManage?style=flat&logo=appveyor)![ Python version](https://img.shields.io/badge/python-3.6%2B-blue?style=flat&logo=appveyor)![GitHub](https://img.shields.io/github/license/seeker0720/AccountManage?style=flat&logo=appveyor)
+
 用于管理用户的账户信息，如登录名，密码等，类似于Google密码管理器、Dashlane等，不同于这些线上应用，该程序只允许你在本地运行，所有信息都存储在本地MySQL数据库中
 
 ### 部署教程
