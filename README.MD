@@ -59,6 +59,14 @@ FLUSH PRIVILEGES;
 exit
 ```
 
+如果MySQL版本是8.0的版本，第一行的SQL语句有些许改动：
+
+```sql
+CREATE USER 'admin'@'localhost' IDENTIFIED WITH mysql_native_password BY 'AccountManage123!@#';
+```
+
+
+
 上面的命令分别创建了数据库和用于登录的用户，你可以修改为你自己的，同时将settings.py文件中对应的部分修改
 
 #### 修改settings.py文件
