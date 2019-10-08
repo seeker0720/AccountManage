@@ -62,6 +62,10 @@ def create_session():
 
 
 if __name__ == '__main__':
-    Session = create_session()
-    obj = Session.query(AccountMsg).filter_by(user_type='test').first()
-    print(obj.login_msg.login_name)
+    # Session = create_session()
+    # obj = Session.query(AccountMsg).filter_by(user_type='test').first()
+    # print(obj.login_msg.login_name)
+    # obj.user_password = 'teesss'
+    # Session.commit()
+    # print('ok')
+    pass

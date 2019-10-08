@@ -13,13 +13,14 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(BASE_DIR)
 from core.get_command_line_argv import get_argv
-
+from core import main
 
 cmd = get_argv()
 
 if cmd == 'createpassword':
-    pass
-
-if cmd == 'runapp':
+    main.create_password()
+elif cmd == 'runapp':
+    main.run()
+else:
     pass
 

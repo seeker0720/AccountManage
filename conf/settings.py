@@ -24,3 +24,19 @@ DATABASES = {
 
 default_DB = DATABASES.get('default')
 ENGINE = f"{default_DB.get('DB_API')}://{default_DB.get('USER')}:{default_DB.get('PASSWORD')}@{default_DB.get('HOST')}/{default_DB.get('NAME')}?charset=utf8"
+
+
+ERROR = [
+    'Error：输入错误',
+    'Error：账户信息不存在',
+    'Error：请输入数字'
+    'Error：用户不存在'
+]
+
+WARNING = [
+    'Warning：错误次数太多',
+    'Warning：无用户信息，请添加信息后再执行该操作',
+    'Warning：错误次数太多',
+    'Warning：密码错误'
+
+]

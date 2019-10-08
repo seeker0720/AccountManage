@@ -9,7 +9,7 @@
 """
 from core.models import create_session, LoginMsg
 from core.common import md5_msg
-
+from conf.settings import WARNING,ERROR
 
 Session = create_session()
 
@@ -33,9 +33,11 @@ def log_inner(func):
                     print(f'{login_name} 登录成功')
                     return func(*args, **kwargs)
                 else:
-                    print('密码错误')
+                    warning = WARNING[3]
+                    print(f'\n{warning:-^60}\n')
         else:
-            print('错误次数太多，请稍后')
+            warning = WARNING[0]
+            print(f'\n{warning:-^60}\n')
     return wrapper
 
 
@@ -53,19 +55,47 @@ def login():
         obj = Session.query(LoginMsg).filter_by(login_name=login_name).first()
 
         if not obj:
-            print('用户不存在')
+            error = ERROR[3]
+            print(f'\n{error:!^40}\n')
         else:
             if obj.login_password == md5_msg(login_password_tmp):
                 print(f'{login_name} 登录成功')
                 login_status = 1
                 return obj.id, login_status
             else:
-                print('密码错误')
+                warning = WARNING[3]
+                print(f'\n{warning:-^60}\n')
     else:
-        print('错误次数太多，请稍后')
+        warning = WARNING[0]
+        print(f'\n{warning:-^60}\n')
         return None, login_status
 
 
+def auth_password(name):
+    def wrapper(func):
+        def inner(*args, **kwargs):
+            Session = create_session()
+            obj = Session.query(LoginMsg).filter_by(login_name=name).first()
+            _password = obj.login_password
+            error_num = 0
+            while error_num < 3:
+                error_num += 1
+                tips = f'{error_num:-^20}'
+                print(tips)
+                password = input('请输入管理员密码：').strip()
+                if _password == md5_msg(password):
+                    return func(*args, **kwargs)
+                else:
+                    warning = WARNING[3]
+                    print(f'\n{warning:-^60}\n')
+            else:
+                warning = WARNING[0]
+                print(f'\n{warning:-^60}\n')
+        return inner
+    return wrapper
+
+
 if __name__ == '__main__':
-    login_name1, login_status1 = login()
-    print(login_name1, login_status1)
+    # login_name1, login_status1 = login()
+    # print(login_name1, login_status1)
+    pass

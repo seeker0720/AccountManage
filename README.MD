@@ -99,7 +99,7 @@ DATABASES = {
 
 
 
-##### 目录结构如下
+##### 目录结构-v0.0.1
 
 + AccountManage /
   + AM_env /
@@ -121,6 +121,9 @@ DATABASES = {
   + requirements.txt
 
 
+
+- **v0.0.1版本说明**
+  - 程序能实现简单的用户账户信息管理，具有查询、删除、修改、添加等基本功能
 
 
 
