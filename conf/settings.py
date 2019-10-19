@@ -39,5 +39,8 @@ WARNING = [
     'Warning：错误次数太多',
     'Warning：密码错误',
     'Warning: 请输入完整的信息'
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/master
 ]
