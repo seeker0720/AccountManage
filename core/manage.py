@@ -22,5 +22,7 @@ if cmd == 'createpassword':
 elif cmd == 'runapp':
     main.run()
 else:
+    print('Sorry!!')
     pass
+
 
