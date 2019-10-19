@@ -56,7 +56,7 @@ def run():
                     print(f'\n{error:!^40}\n')
                     continue
                 try:
-                    user_id, user_name, user_password, user_type = Am(obj=obj, session=session).view_detail_msg()
+                    user_id, user_type, user_name, user_password = Am(obj=obj, session=session).view_detail_msg()
                 except TypeError:
                     pass
                 else:

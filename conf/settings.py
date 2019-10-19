@@ -37,6 +37,6 @@ WARNING = [
     'Warning：错误次数太多',
     'Warning：无用户信息，请添加信息后再执行该操作',
     'Warning：错误次数太多',
-    'Warning：密码错误'
-
+    'Warning：密码错误',
+    'Warning: 请输入完整的信息'
 ]
