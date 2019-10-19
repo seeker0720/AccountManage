@@ -51,11 +51,7 @@ class AdminAccount:
         user_type = input('账户类型：').strip()
         user_name = input('账户登录名：').strip()
         user_password = input('账户密码：').strip()
-<<<<<<< HEAD
-        # 如果输入有为空，即信息补全，不予存储
-=======
         # 如果输入内容有为空，及信息不完整，不予存储
->>>>>>> refs/remotes/origin/master
         tmp_msg_ls = [user_type, user_name, user_password]
         for i in tmp_msg_ls:
             if len(i) == 0:
