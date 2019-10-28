@@ -7,6 +7,7 @@
 @Date：2019/10/7 19:20
 @Instructions:
 """
+import getpass
 from core.models import create_session, LoginMsg
 from core.common import md5_msg
 from conf.settings import WARNING,ERROR
@@ -23,7 +24,6 @@ def log_inner(func):
             print(tips)
             login_name = input('登录名：').strip()
             login_password_tmp = input('登陆密码：').strip()
-
             obj = Session.query(LoginMsg).filter_by(login_name=login_name).first()
 
             if not obj:
@@ -82,7 +82,8 @@ def auth_password(name):
                 error_num += 1
                 tips = f'{error_num:-^20}'
                 print(tips)
-                password = input('请输入管理员密码：').strip()
+                #password = input('请输入管理员密码：').strip()
+                password = getpass.getpass('请输入管理员密码：')
                 if _password == md5_msg(password):
                     return func(*args, **kwargs)
                 else:
