@@ -82,7 +82,7 @@ def auth_password(name):
                 error_num += 1
                 tips = f'{error_num:-^20}'
                 print(tips)
-                #password = input('请输入管理员密码：').strip()
+                # password = input('请输入管理员密码：').strip()
                 password = getpass.getpass('请输入管理员密码：')
                 if _password == md5_msg(password):
                     return func(*args, **kwargs)
